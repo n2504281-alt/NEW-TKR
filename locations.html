@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locations — Tahir Khan Restaurant | Global Directory</title>
+  <meta name="description" content="Find a TKR branch near you in Pakistan, the United Kingdom, and Saudi Arabia. Timings, directions, and contact information.">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23C9974A%22 font-family=%22Playfair Display%22 font-weight=%22bold%22>TKR</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Inline Map details */
+    .map-container {
+      width: 100%;
+      height: 400px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+    .halal-banner {
+      background-color: var(--color-green-halal);
+      padding: var(--space-md) 0;
+      text-align: center;
+      color: var(--color-cream);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-logo">TKR</div>
+    <div class="preloader-tagline" data-lang-content="en">Global Flavors · Pakistani Soul</div>
+    <div class="preloader-tagline" data-lang-content="ur">عالمی ذائقے · پاکستانی روح</div>
+  </div>
+
+  <!-- Custom Cursors -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo">
+        <span class="logo-main">TKR</span>
+        <span class="logo-sub" data-lang-content="en">Tahir Khan Restaurant</span>
+        <span class="logo-sub" data-lang-content="ur">طاہر خان ریسٹورنٹ</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="locations.html" class="active">Locations</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="recognition.html">Recognition</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="lang-selector">
+          <option value="en">EN</option>
+          <option value="ur">اردو</option>
+        </select>
+        <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="en">Order Online</a>
+        <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="ur">آن لائن آرڈر</a>
+      </div>
+      <button class="mobile-nav-toggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay">
+    <ul class="mobile-nav-links">
+      <li>
+        <a href="index.html" data-lang-content="en">Home</a>
+        <a href="index.html" data-lang-content="ur">ہوم</a>
+      </li>
+      <li>
+        <a href="about.html" data-lang-content="en">About</a>
+        <a href="about.html" data-lang-content="ur">ہمارے بارے میں</a>
+      </li>
+      <li>
+        <a href="story.html" data-lang-content="en">Our Story</a>
+        <a href="story.html" data-lang-content="ur">کہانی</a>
+      </li>
+      <li>
+        <a href="menu.html" data-lang-content="en">Menu</a>
+        <a href="menu.html" data-lang-content="ur">مینو</a>
+      </li>
+      <li>
+        <a href="locations.html" class="active" data-lang-content="en">Locations</a>
+        <a href="locations.html" class="active" data-lang-content="ur">مقامات</a>
+      </li>
+      <li>
+        <a href="catering.html" data-lang-content="en">Catering</a>
+        <a href="catering.html" data-lang-content="ur">کیٹرنگ</a>
+      </li>
+      <li>
+        <a href="recognition.html" data-lang-content="en">Recognition</a>
+        <a href="recognition.html" data-lang-content="ur">اعتراف</a>
+      </li>
+      <li>
+        <a href="careers.html" data-lang-content="en">Careers</a>
+        <a href="careers.html" data-lang-content="ur">ملازمتیں</a>
+      </li>
+      <li>
+        <a href="contact.html" data-lang-content="en">Contact</a>
+        <a href="contact.html" data-lang-content="ur">رابطہ کریں</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container reveal">
+      <h1 class="page-hero-title" data-lang-content="en">Find TKR Near You</h1>
+      <h1 class="page-hero-title" data-lang-content="ur">اپنے قریبی ٹی کے آر تلاش کریں</h1>
+      <p class="page-hero-sub" data-lang-content="en">8 Global Locations Across Pakistan, UK, and Saudi Arabia</p>
+      <p class="page-hero-sub" data-lang-content="ur">پاکستان، برطانیہ اور سعودی عرب میں ۸ عالمی مقامات</p>
+      <div class="manuscript-divider"></div>
+    </div>
+  </section>
+
+  <!-- Locations Cards Grid -->
+  <section class="bg-section-dark">
+    <div class="container">
+      <div class="locations-grid reveal" style="grid-template-columns: repeat(3, 1fr); margin-bottom: var(--space-xl);">
+        
+        <!-- Location 1 -->
+        <div class="location-card">
+          <div class="location-card-country">🇵🇰 Pakistan</div>
+          <div class="location-card-city">Islamabad (Flagship)</div>
+          <ul class="location-card-details">
+            <li><strong>Address:</strong> Lethrar Road, Taramri Chowk, Islamabad</li>
+            <li><strong>Timings:</strong> Daily 12:00 PM – 11:30 PM</li>
+            <li><strong>Est Date:</strong> Original Flagship — Dec 2020</li>
+          </ul>
+          <div class="location-card-links">
+            <a href="https://maps.google.com" target="_blank" class="btn btn-outline btn-compact">Directions</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="en">Order Now</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="ur">ابھی آرڈر کریں</a>
+          </div>
+        </div>
+
+        <!-- Location 2 -->
+        <div class="location-card">
+          <div class="location-card-country">🇵🇰 Pakistan</div>
+          <div class="location-card-city">Islamabad (F-6)</div>
+          <ul class="location-card-details">
+            <li><strong>Address:</strong> 789 F-6 Markaz, Islamabad 44000</li>
+            <li><strong>Timings:</strong> Daily 12:00 PM – 11:30 PM</li>
+            <li><strong>Phone:</strong> +92 51 123 4567</li>
+          </ul>
+          <div class="location-card-links">
+            <a href="https://maps.google.com" target="_blank" class="btn btn-outline btn-compact">Directions</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="en">Order Now</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="ur">ابھی آرڈر کریں</a>
+          </div>
+        </div>
+
+        <!-- Location 3 -->
+        <div class="location-card">
+          <div class="location-card-country">🇬🇧 United Kingdom</div>
+          <div class="location-card-city">Bradford (Drighlington)</div>
+          <ul class="location-card-details">
+            <li><strong>Address:</strong> 1 King St, Drighlington, Bradford BD11 1LW</li>
+            <li><strong>Timings:</strong> Daily 4:00 PM – 11:00 PM</li>
+            <li><strong>Est Date:</strong> Opened March 2025</li>
+          </ul>
+          <div class="location-card-links">
+            <a href="https://maps.google.com" target="_blank" class="btn btn-outline btn-compact">Directions</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="en">Order Now</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="ur">ابھی آرڈر کریں</a>
+          </div>
+        </div>
+
+        <!-- Location 4 -->
+        <div class="location-card">
+          <div class="location-card-country">🇬🇧 United Kingdom</div>
+          <div class="location-card-city">Bradford (City Centre)</div>
+          <ul class="location-card-details">
+            <li><strong>Address:</strong> 123 Main Street, Bradford BD1 1AA</li>
+            <li><strong>Timings:</strong> Daily 4:00 PM – 11:00 PM</li>
+            <li><strong>Phone:</strong> +44 7464 444 455</li>
+          </ul>
+          <div class="location-card-links">
+            <a href="https://maps.google.com" target="_blank" class="btn btn-outline btn-compact">Directions</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="en">Order Now</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="ur">ابھی آرڈر کریں</a>
+          </div>
+        </div>
+
+        <!-- Location 5 -->
+        <div class="location-card">
+          <div class="location-card-country">🇬🇧 United Kingdom</div>
+          <div class="location-card-city">Birmingham</div>
+          <ul class="location-card-details">
+            <li><strong>Address:</strong> 225 Ladypool Rd, Balsall Heath, Birmingham B12 8LF</li>
+            <li><strong>Timings:</strong> Daily 4:00 PM – 11:00 PM</li>
+            <li><strong>Phone:</strong> +44 121 274 4196</li>
+          </ul>
+          <div class="location-card-links">
+            <a href="https://maps.google.com" target="_blank" class="btn btn-outline btn-compact">Directions</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="en">Order Now</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="ur">ابھی آرڈر کریں</a>
+          </div>
+        </div>
+
+        <!-- Location 6 -->
+        <div class="location-card">
+          <div class="location-card-country">🇸🇦 Saudi Arabia</div>
+          <div class="location-card-city">Riyadh</div>
+          <ul class="location-card-details">
+            <li><strong>Address:</strong> 456 King Fahd Road, Riyadh 12345</li>
+            <li><strong>Timings:</strong> Daily 12:00 PM – 12:00 AM</li>
+            <li><strong>Phone:</strong> +966 11 234 5678</li>
+          </ul>
+          <div class="location-card-links">
+            <a href="https://maps.google.com" target="_blank" class="btn btn-outline btn-compact">Directions</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="en">Order Now</a>
+            <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="ur">ابھی آرڈر کریں</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Map Container -->
+      <div class="reveal">
+        <h2 style="text-align: center; margin-bottom: var(--space-md);" data-lang-content="en">Interactive Map View</h2>
+        <h2 style="text-align: center; margin-bottom: var(--space-md);" data-lang-content="ur">انٹرایکٹو نقشہ کا منظر</h2>
+        
+        <div class="map-container">
+          <!-- Stand-in elegant dark stylized iframe mockup representing Google maps API -->
+          <div style="background-color: var(--color-bg-card); width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid var(--color-border);">
+            <svg viewBox="0 0 24 24" style="fill: var(--color-gold-primary); width: 48px; height: 48px; margin-bottom: var(--space-xs);"><path d="M12,2C15.31,2 18,4.66 18,7.88C18,12.19 12,22 12,22C12,22 6,12.19 6,7.88C6,4.66 8.69,2 12,2M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6Z"/></svg>
+            <p style="color: var(--color-cream); font-weight: 700;" data-lang-content="en">Google Maps API Integration</p>
+            <p style="color: var(--color-cream); font-weight: 700;" data-lang-content="ur">گوگل میپس API انضمام</p>
+            <p style="font-size: 12px; color: var(--color-cream-muted);" data-lang-content="en">Map rendering matches luxury dark theme constraints.</p>
+            <p style="font-size: 12px; color: var(--color-cream-muted);" data-lang-content="ur">نقشہ کا منظر عیش و آرام کے سیاہ تھیم کے مطابق ہے۔</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Halal notice banner -->
+  <div class="halal-banner">
+    <span data-lang-content="en">✓ All TKR global locations are 100% Halal Certified</span>
+    <span data-lang-content="ur">✓ تمام ٹی کے آر عالمی مقامات ۱۰۰٪ حلال تصدیق شدہ ہیں</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: var(--space-sm);">
+            <span class="logo-main">TKR</span>
+            <span class="logo-sub">Tahir Khan Restaurant</span>
+          </a>
+          <p data-lang-content="en" style="margin-top: var(--space-sm);">Global Flavors. Pakistani Soul. Experience authentic fine dining from Batkhela to the world.</p>
+          <p data-lang-content="ur" style="margin-top: var(--space-sm);">عالمی ذائقے۔ پاکستانی روح۔ بات خیلہ سے پوری دنیا تک حقیقی عمدہ کھانے کا تجربہ کریں۔</p>
+          <div class="badge badge-halal">✓ 100% Halal Certified</div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-lang-content="en">Quick Links</h4>
+          <h4 class="footer-col-title" data-lang-content="ur">فوری لنکس</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About TKR</a></li>
+            <li><a href="story.html">Tahir Khan Story</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="catering.html">Catering Services</a></li>
+            <li><a href="recognition.html">Recognition</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-lang-content="en">Contact Info</h4>
+          <h4 class="footer-col-title" data-lang-content="ur">رابطہ کی معلومات</h4>
+          <ul class="footer-links" style="gap: 12px;">
+            <li><strong>Email:</strong> info@tkrrestaurants.com</li>
+            <li><strong>UK:</strong> +44 07464 444 455</li>
+            <li><strong>PK:</strong> +92 51 123 4567</li>
+            <li><strong>SA:</strong> +966 11 234 5678</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-lang-content="en">Newsletter</h4>
+          <h4 class="footer-col-title" data-lang-content="ur">خبرنامہ</h4>
+          <p data-lang-content="en">Stay updated with new dishes, events, and global offers.</p>
+          <p data-lang-content="ur">نئے پکوانوں، تقریبات اور عالمی پیشکشوں سے باخبر رہیں۔</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+            <input type="email" class="form-control" placeholder="Email Address" required>
+            <button type="submit" class="btn btn-primary btn-compact">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div data-lang-content="en">© 2026 TKR — Tahir Khan Restaurant. All Rights Reserved.</div>
+        <div data-lang-content="ur">© 2026 TKR — طاہر خان ریسٹورنٹ۔ جملہ حقوق محفوظ ہیں۔</div>
+        <div class="footer-countries">
+          <span>🇵🇰 Pakistan</span> | <span>🇬🇧 United Kingdom</span> | <span>🇸🇦 Saudi Arabia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

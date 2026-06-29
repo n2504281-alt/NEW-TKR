@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Menu — Tahir Khan Restaurant | Heritage Culinary Catalog</title>
+  <meta name="description" content="Discover TKR's authentic Pakistani menu featuring traditional starters, clay pot handis, tandoori breads, and the signature Dam Pukht.">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23C9974A%22 font-family=%22Playfair Display%22 font-weight=%22bold%22>TKR</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Inline adjustment for menu page items display */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-md);
+      margin-bottom: var(--space-xl);
+    }
+    .menu-item-card {
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .menu-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+      border-bottom: 1px dotted var(--color-border);
+      padding-bottom: 4px;
+    }
+    .menu-item-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--color-gold-primary);
+    }
+    .menu-item-price {
+      font-family: var(--font-body);
+      font-weight: 700;
+      color: var(--color-cream);
+    }
+    .menu-item-desc {
+      font-size: 13px;
+      color: var(--color-cream-muted);
+      line-height: 1.5;
+    }
+    .menu-item-badges {
+      margin-top: 10px;
+      display: flex;
+      gap: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-logo">TKR</div>
+    <div class="preloader-tagline" data-lang-content="en">Global Flavors · Pakistani Soul</div>
+    <div class="preloader-tagline" data-lang-content="ur">عالمی ذائقے · پاکستانی روح</div>
+  </div>
+
+  <!-- Custom Cursors -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo">
+        <span class="logo-main">TKR</span>
+        <span class="logo-sub" data-lang-content="en">Tahir Khan Restaurant</span>
+        <span class="logo-sub" data-lang-content="ur">طاہر خان ریسٹورنٹ</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="recognition.html">Recognition</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="lang-selector">
+          <option value="en">EN</option>
+          <option value="ur">اردو</option>
+        </select>
+        <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="en">Order Online</a>
+        <a href="menu.html" class="btn btn-primary btn-compact" data-lang-content="ur">آن لائن آرڈر</a>
+      </div>
+      <button class="mobile-nav-toggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay">
+    <ul class="mobile-nav-links">
+      <li>
+        <a href="index.html" data-lang-content="en">Home</a>
+        <a href="index.html" data-lang-content="ur">ہوم</a>
+      </li>
+      <li>
+        <a href="about.html" data-lang-content="en">About</a>
+        <a href="about.html" data-lang-content="ur">ہمارے بارے میں</a>
+      </li>
+      <li>
+        <a href="story.html" data-lang-content="en">Our Story</a>
+        <a href="story.html" data-lang-content="ur">کہانی</a>
+      </li>
+      <li>
+        <a href="menu.html" class="active" data-lang-content="en">Menu</a>
+        <a href="menu.html" class="active" data-lang-content="ur">مینو</a>
+      </li>
+      <li>
+        <a href="locations.html" data-lang-content="en">Locations</a>
+        <a href="locations.html" data-lang-content="ur">مقامات</a>
+      </li>
+      <li>
+        <a href="catering.html" data-lang-content="en">Catering</a>
+        <a href="catering.html" data-lang-content="ur">کیٹرنگ</a>
+      </li>
+      <li>
+        <a href="recognition.html" data-lang-content="en">Recognition</a>
+        <a href="recognition.html" data-lang-content="ur">اعتراف</a>
+      </li>
+      <li>
+        <a href="careers.html" data-lang-content="en">Careers</a>
+        <a href="careers.html" data-lang-content="ur">ملازمتیں</a>
+      </li>
+      <li>
+        <a href="contact.html" data-lang-content="en">Contact</a>
+        <a href="contact.html" data-lang-content="ur">رابطہ کریں</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container reveal">
+      <h1 class="page-hero-title" data-lang-content="en">Our Heritage Menu</h1>
+      <h1 class="page-hero-title" data-lang-content="ur">ہمارا روایتی مینو</h1>
+      <p class="page-hero-sub" data-lang-content="en">Authentic Flavors, Artfully Plated</p>
+      <p class="page-hero-sub" data-lang-content="ur">حقیقی ذائقے، خوبصورت پیشکش</p>
+      <div class="manuscript-divider"></div>
+    </div>
+  </section>
+
+  <!-- Sticky Category Filter & Search -->
+  <div class="filter-bar">
+    <div class="container" style="display: flex; flex-direction: column; gap: var(--space-sm);">
+      <div class="menu-search-container">
+        <input type="text" class="menu-search-input" placeholder="Search dishes (e.g., Dam Pukht, Kebab)...">
+      </div>
+      <ul class="filter-buttons">
+        <li><button class="filter-btn active" data-filter="all">All Items</button></li>
+        <li><button class="filter-btn" data-filter="starters">Starters</button></li>
+        <li><button class="filter-btn" data-filter="mains">Mains</button></li>
+        <li><button class="filter-btn" data-filter="grills">Grills</button></li>
+        <li><button class="filter-btn" data-filter="breads">Breads</button></li>
+        <li><button class="filter-btn" data-filter="rice">Rice</button></li>
+        <li><button class="filter-btn" data-filter="desserts">Desserts</button></li>
+        <li><button class="filter-btn" data-filter="drinks">Drinks</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Menu Display Area -->
+  <section class="bg-section-dark" style="padding-top: 0;">
+    <div class="container">
+      <div class="menu-grid">
+        
+        <!-- ============ STARTERS ============ -->
+        <div class="card menu-item-card" data-category="starters">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Chapli Kebab</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">چپلی کباب</span>
+            <span class="menu-item-price">£5.95</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Minced meat patty infused with fresh herbs and spices, Peshawar-style.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">پشاور سٹائل میں تازہ جڑی بوٹیوں اور مسالحوں کے ساتھ تیار کردہ قیمے کا کباب۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+            <span class="badge badge-new" data-lang-content="en">Popular</span>
+            <span class="badge badge-new" data-lang-content="ur">مقبول</span>
+          </div>
+        </div>
+
+        <div class="card menu-item-card" data-category="starters">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Seekh Kebab (2pc)</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">سیخ کباب</span>
+            <span class="menu-item-price">£4.95</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Spiced minced meat skewers, grilled over natural charcoal.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">قدرتی کوئلے پر گرل کیے گئے مسالیدار قیمے کے سیخ کباب۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+          </div>
+        </div>
+
+        <div class="card menu-item-card" data-category="starters">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Shami Kebab (2pc)</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">شامی کباب</span>
+            <span class="menu-item-price">£4.50</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Traditional ground meat and lentil patties, golden shallow-fried.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">روایتی پسی ہوئی دال اور گوشت کی ٹکیاں، سنہری فرائی کی ہوئیں۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+          </div>
+        </div>
+
+        <div class="card menu-item-card" data-category="starters">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Samosa (2pc)</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">سموسہ</span>
+            <span class="menu-item-price">£3.50</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Crispy triangular pastry shells stuffed with seasoned potatoes and peas.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">مسالیدار آلو اور مٹر سے بھرا ہوا خستہ اور کرکرا سموسہ۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+          </div>
+        </div>
+
+        <!-- ============ MAINS ============ -->
+        <div class="card menu-item-card" data-category="mains">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Dam Pukht (Lamb)</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">دم پخت</span>
+            <span class="menu-item-price">£18.95</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">TKR's Signature: Whole steam-roasted lamb shank with mild spices and basmati rice.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">ٹی کے آر کی خاص ڈش: ہلکے مسالحوں اور باسمتی چاول کے ساتھ بھاپ پر روسٹ کیا ہوا دنبے کا گوشت۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+            <span class="badge badge-new" data-lang-content="en">Chef Special</span>
+            <span class="badge badge-new" data-lang-content="ur">شیف کی خاص ڈش</span>
+          </div>
+        </div>
+
+        <div class="card menu-item-card" data-category="mains">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Karahi Gosht (Mutton)</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">کڑاہی گوشت</span>
+            <span class="menu-item-price">£12.95</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Mutton chunks simmered in a traditional tomato, green chili, and ginger wok curry.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">ٹماٹر، سبز مرچ اور ادرک کے ساتھ کڑاہی میں پکایا ہوا مٹن کا گوشت۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+          </div>
+        </div>
+
+        <div class="card menu-item-card" data-category="mains">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Nihari (Beef)</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">نہاری</span>
+            <span class="menu-item-price">£13.50</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Slow-cooked tender beef shank stew, thick spiced gravy, topped with ginger and lemon.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">ہلکی آنچ پر پکایا گیا بیف شنک، ادرک اور لیموں کے ساتھ پیش کی جانے والی نہاری۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+          </div>
+        </div>
+
+        <div class="card menu-item-card" data-category="mains">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Daal Mash</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">دال ماش</span>
+            <span class="menu-item-price">£7.95</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Pan-fried white lentils cooked with butter, garlic, ginger, and green chilies.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">مکھن، لہسن، ادرک اور ہری مرچوں کے ساتھ فرائی کی ہوئی سفید ماش کی دال۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+          </div>
+        </div>
+
+        <!-- ============ GRILLS ============ -->
+        <div class="card menu-item-card" data-category="grills">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Mix Grill Platter</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">مکس گرل پلیٹر</span>
+            <span class="menu-item-price">£22.95</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Assorted platter of tikka boti, shish kebabs, reshmi kebabs, and lamb chops.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">ٹکا بوٹی، شیش کباب، ریشمی کباب اور لیمب چپس کا مکس پلیٹر۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+            <span class="badge badge-new" data-lang-content="en">Feeds 2</span>
+            <span class="badge badge-new" data-lang-content="ur">۲ افراد کے لیے</span>
+          </div>
+        </div>
+
+        <div class="card menu-item-card" data-category="grills">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Lamb Chops (4pc)</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">لیمب چپس</span>
+            <span class="menu-item-price">£11.95</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Marinated lamb chops grilled to juicy perfection over open charcoal flames.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">خوشبودار مسالحوں میں میرینیٹ شدہ کوئلے پر پکی ہوئی دنبے کی چانپیں۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+          </div>
+        </div>
+
+        <!-- ============ BREADS ============ -->
+        <div class="card menu-item-card" data-category="breads">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Peshwari Naan</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">پشوری نان</span>
+            <span class="menu-item-price">£3.95</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Sweet, clay-oven baked tandoori bread stuffed with almonds and shredded coconut.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">بادام اور ناریل کے بھرے ہوئے تندوری نان۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+          </div>
+        </div>
+
+        <div class="card menu-item-card" data-category="breads">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Roghni Naan</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">روغنی نان</span>
+            <span class="menu-item-price">£2.25</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Soft tandoori bread topped with clarified butter and sesame seeds.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">تلوں اور مکھن کے ساتھ تندور میں تیار کیا گیا روغنی نان۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+          </div>
+        </div>
+
+        <!-- ============ RICE ============ -->
+        <div class="card menu-item-card" data-category="rice">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Mutton Biryani</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">مٹن بریانی</span>
+            <span class="menu-item-price">£10.95</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Fragrant basmati rice layered with spiced mutton masala, slow steam cooked (dum).</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">خوشبودار باسمتی چاولوں اور مسالیدار مٹن کے ساتھ دم پر تیار کی گئی روایتی بریانی۔</p>
+          <div class="menu-item-badges">
+            <span class="badge badge-halal">Halal</span>
+          </div>
+        </div>
+
+        <!-- ============ DESSERTS ============ -->
+        <div class="card menu-item-card" data-category="desserts">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Gulab Jamun (2pc)</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">گلاب جامن</span>
+            <span class="menu-item-price">£3.95</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Warm milk-solid dumplings soaked in a cardamom-infused sweet rose syrup.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">الائچی اور عرق گلاب کے شیرے میں ڈوبے ہوئے گرم گلاب جامن۔</p>
+        </div>
+
+        <div class="card menu-item-card" data-category="desserts">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Kheer</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">کھیر</span>
+            <span class="menu-item-price">£4.25</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Traditional slow-cooked rice pudding flavored with saffron and nuts.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">زعفران، دودھ اور چاول کے ساتھ ہلکی آنچ پر پکی ہوئی روایتی کھیر۔</p>
+        </div>
+
+        <!-- ============ DRINKS ============ -->
+        <div class="card menu-item-card" data-category="drinks">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Sweet Lassi</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">میٹھی لسی</span>
+            <span class="menu-item-price">£3.50</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Traditional churned yogurt drink sweetened with sugar and ice.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">دہی اور برف کے ساتھ روایتی طریقے سے تیار کی گئی میٹھی لسی۔</p>
+        </div>
+
+        <div class="card menu-item-card" data-category="drinks">
+          <div class="menu-item-header">
+            <span class="menu-item-title dish-title-en" data-lang-content="en">Kashmiri Chai</span>
+            <span class="menu-item-title dish-title-ur" data-lang-content="ur">کشمیری چائے</span>
+            <span class="menu-item-price">£3.95</span>
+          </div>
+          <p class="menu-item-desc dish-desc-en" data-lang-content="en">Pink-colored salted tea topped with crushed almonds and pistachios.</p>
+          <p class="menu-item-desc dish-desc-ur" data-lang-content="ur">پستے اور بادام سے سجی ہوئی روایتی گلابی کشمیری نمکین چائے۔</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: var(--space-sm);">
+            <span class="logo-main">TKR</span>
+            <span class="logo-sub">Tahir Khan Restaurant</span>
+          </a>
+          <p data-lang-content="en" style="margin-top: var(--space-sm);">Global Flavors. Pakistani Soul. Experience authentic fine dining from Batkhela to the world.</p>
+          <p data-lang-content="ur" style="margin-top: var(--space-sm);">عالمی ذائقے۔ پاکستانی روح۔ بات خیلہ سے پوری دنیا تک حقیقی عمدہ کھانے کا تجربہ کریں۔</p>
+          <div class="badge badge-halal">✓ 100% Halal Certified</div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-lang-content="en">Quick Links</h4>
+          <h4 class="footer-col-title" data-lang-content="ur">فوری لنکس</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About TKR</a></li>
+            <li><a href="story.html">Tahir Khan Story</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="catering.html">Catering Services</a></li>
+            <li><a href="recognition.html">Recognition</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-lang-content="en">Contact Info</h4>
+          <h4 class="footer-col-title" data-lang-content="ur">رابطہ کی معلومات</h4>
+          <ul class="footer-links" style="gap: 12px;">
+            <li><strong>Email:</strong> info@tkrrestaurants.com</li>
+            <li><strong>UK:</strong> +44 07464 444 455</li>
+            <li><strong>PK:</strong> +92 51 123 4567</li>
+            <li><strong>SA:</strong> +966 11 234 5678</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-lang-content="en">Newsletter</h4>
+          <h4 class="footer-col-title" data-lang-content="ur">خبرنامہ</h4>
+          <p data-lang-content="en">Stay updated with new dishes, events, and global offers.</p>
+          <p data-lang-content="ur">نئے پکوانوں، تقریبات اور عالمی پیشکشوں سے باخبر رہیں۔</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+            <input type="email" class="form-control" placeholder="Email Address" required>
+            <button type="submit" class="btn btn-primary btn-compact">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div data-lang-content="en">© 2026 TKR — Tahir Khan Restaurant. All Rights Reserved.</div>
+        <div data-lang-content="ur">© 2026 TKR — طاہر خان ریسٹورنٹ۔ جملہ حقوق محفوظ ہیں۔</div>
+        <div class="footer-countries">
+          <span>🇵🇰 Pakistan</span> | <span>🇬🇧 United Kingdom</span> | <span>🇸🇦 Saudi Arabia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>
